@@ -1,5 +1,6 @@
 package com.example.hello2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -66,6 +67,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         alerter("nom : " + edtInputNom.getText().toString());
         // TODO : récupérer le contenu du champ d'entrée texte et l'afficher
+
+        Bundle myBdl = new Bundle();
+        myBdl.putString("nomSaisi",edtInputNom.getText().toString());
+
+
+        Intent myIntent;
+        myIntent = new Intent(MainActivity.this,SecondActivity.class);
+        myIntent.putExtras(myBdl);
+        startActivity(myIntent);
 
     }
 }
