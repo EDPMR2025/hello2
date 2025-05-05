@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        alerter("click !");
+        alerter("nom : " + edtInputNom.getText().toString());
+        // TODO : récupérer le contenu du champ d'entrée texte et l'afficher
+
     }
 }
